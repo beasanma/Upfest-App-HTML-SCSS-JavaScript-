@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="global.css" rel="stylesheet">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Festivals</title>
+</head>
+<body>
+<div class="container">
+
+    <div class="header">
+        <img class="header_img" src="images/somnii_23.jpg" alt="sonar24">
+        <div class="header_icon">
+            <img class="heart-icon" src="icons/heart_open.svg" alt="favorites_icon" data-id="somnii2024">
+        </div>
+    </div>
+    <div class="festivals_header">
+        <h3> RFM SOMNII 2024</h3>
+        <p class="p1"> sexta 12 jul.</p>
+        <p class="p2"> Praia do Relógio, Figueira da Foz </p>
+    </div>
+    <hr>
+
+    <div class="festivals_artists">
+        <h2> Concertos </h2>
+        <div class="artist_tab">
+            <img class="pics" src="images/timmy.jpg" alt="timmy">
+            <div class="artist_tab_desc">
+                <h3> TIMMY TRUMPET </h3>
+                <p class="p1"> Sábado, 21h00 </p>
+                <p class="p2"> Palco Principal </p>
+            </div>
+            <div class="icons">
+                <img class="heart-icon" src="icons/heart_open.svg" alt="favorites" data-id="timmy">
+            </div>
+        </div>
+        <div class="artist_tab">
+            <img class="pics" src="images/oliver.jpg" alt="oliver">
+            <div class="artist_tab_desc">
+                <h3> OLIVER HELDENG </h3>
+                <p class="p1"> Sábado, 23h30 </p>
+                <p class="p2"> Palco Principal </p>
+            </div>
+            <div class="icons">
+                <img class="heart-icon" src="icons/heart_open.svg" alt="favorites" data-id="oliver">
+            </div>
+        </div>
+        <div class="artist_tab">
+            <img class="pics" src="images/blasterjaxx.jpg" alt="blasterjaxx">
+            <div class="artist_tab_desc">
+                <h3> BLASTERJAXX </h3>
+                <p class="p1"> Domingo, 18h00 </p>
+                <p class="p2"> Palco Principal </p>
+            </div>
+            <div class="icons">
+                <img class="heart-icon" src="icons/heart_open.svg" alt="favorites" data-id="blasterjaxx">
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="festival_description">
+        <h2> Informações </h2>
+        <p>O RFM Somnii é o maior festival de praia em Portugal. Dedicado à música eletrónica, é palco habitual de
+            alguns dos DJ's mais conhecidos do mundo da música. Por enquanto, Alok, encabeça o sunset que vai cobrir a
+            Praia do Relógio na Figueira da Foz.</p>
+    </div>
+    <hr>
+
+    <div class="ticket_container">
+        <h2> Bilhetes </h2>
+        <div class="ticket_types">
+            <div class="ticket_icon">
+                <img src="icons/nav_ticket.svg" alt="ticket">
+            </div>
+            <div class="ticket_desc first_ticket">
+                <h3> Early Bird </h3>
+                <p> Indisponível </p>
+            </div>
+            <div class="price_soldOut">
+                <p> 25,00 € </p>
+            </div>
+        </div>
+
+        <div class="ticket_types">
+            <div class="ticket_icon">
+                <img src="icons/nav_ticket_active.svg" alt="ticket">
+            </div>
+            <div class="ticket_desc second_ticket">
+                <h3> Segunda Venda </h3>
+                <p> Até 30 de abril </p>
+            </div>
+            <div class="price">
+                <p> 35,00 € </p>
+            </div>
+        </div>
+
+        <div class="ticket_types">
+            <div class="ticket_icon">
+                <img src="icons/nav_ticket_active.svg" alt="ticket">
+            </div>
+            <div class="ticket_desc third_ticket">
+                <h3> Venda Final </h3>
+                <p> Até 12 de julho </p>
+            </div>
+            <div class="price">
+                <p> 45,00 € </p>
+            </div>
+        </div>
+
+        <div class="page_overlay" id="overlay">
+            <div class="popup">
+                <h2> Confirmação </h2>
+                <div class="ticket_types">
+                    <div class="chosen_ticket_icon">
+                        <img src="icons/nav_ticket_active.svg" alt="ticket">
+                    </div>
+                    <div class="chosen_ticket">
+                        <h3> Segunda V... </h3>
+                        <p>Até 30 de abril </p>
+                    </div>
+                    <div class="price_popUp">
+                        <p> 35,00 € </p>
+                    </div>
+                </div>
+                <p class="purchase_desc"> Estás a comprar um bilhete para o festival RFM Somnii 2024. Verifica os teus
+                    dados e clica em
+                    “Confirmar” para gerar uma referência de pagamento. </p>
+                <div class="client_information">
+                    <div class="required_fields">
+                        <p> Nome </p>
+                        <p> E-mail</p>
+                    </div>
+                    <div class="client_input">
+                        <p> João Sousa </p>
+                        <p> joao.sousa@gmail.com </p>
+                    </div>
+                </div>
+                <div class="button_container">
+                    <div class="confirm_button" id="confirmButton">
+                        <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M19.6895 0.23369C20.0674 0.577168 20.1057 1.17383 19.7751 1.56638L7.04779 16.6775C6.88211 16.8742 6.64535 16.9908 6.39389 16.9995C6.14242 17.0082 5.89872 16.9082 5.72081 16.7234L0.266266 11.0567C-0.0887555 10.6879 -0.0887555 10.0899 0.266266 9.72107C0.621288 9.35224 1.19689 9.35224 1.55191 9.72107L6.31935 14.6739L18.4067 0.322536C18.7374 -0.0700093 19.3117 -0.109787 19.6895 0.23369Z"
+                                  fill="#E6E6E6"/>
+                            <span> Confirmar </span>
+                        </svg>
+                    </div>
+                    <div class="cancel_button" id="cancelButton">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L8 6.58579L14.2929 0.292893C14.6834 -0.0976311 15.3166 -0.0976311 15.7071 0.292893C16.0976 0.683417 16.0976 1.31658 15.7071 1.70711L9.41421 8L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L8 9.41421L1.70711 15.7071C1.31658 16.0976 0.683417 16.0976 0.292893 15.7071C-0.0976311 15.3166 -0.0976311 14.6834 0.292893 14.2929L6.58579 8L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"
+                                  fill="#E6E6E6"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page_overlay" id="overlayLastTicket">
+            <div class="popup">
+                <h2> Confirmação </h2>
+                <div class="ticket_types">
+                    <div class="chosen_ticket_icon">
+                        <img src="icons/nav_ticket_active.svg" alt="ticket">
+                    </div>
+                    <div class="chosen_ticket">
+                        <h3> Venda Final </h3>
+                        <p>Até 12 de julho </p>
+                    </div>
+                    <div class="price_popUp">
+                        <p> 45,00 € </p>
+                    </div>
+                </div>
+                <p class="purchase_desc"> Estás a comprar um bilhete para o festival RFM Somnii 2024. Verifica os teus
+                    dados e clica em
+                    “Confirmar” para gerar uma referência de pagamento. </p>
+                <div class="client_information">
+                    <div class="required_fields">
+                        <p> Nome </p>
+                        <p> E-mail</p>
+                    </div>
+                    <div class="client_input">
+                        <p> João Sousa </p>
+                        <p> joao.sousa@gmail.com </p>
+                    </div>
+                </div>
+                <div class="button_container">
+                    <div class="confirm_button" id="confirmButtonLast">
+                        <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M19.6895 0.23369C20.0674 0.577168 20.1057 1.17383 19.7751 1.56638L7.04779 16.6775C6.88211 16.8742 6.64535 16.9908 6.39389 16.9995C6.14242 17.0082 5.89872 16.9082 5.72081 16.7234L0.266266 11.0567C-0.0887555 10.6879 -0.0887555 10.0899 0.266266 9.72107C0.621288 9.35224 1.19689 9.35224 1.55191 9.72107L6.31935 14.6739L18.4067 0.322536C18.7374 -0.0700093 19.3117 -0.109787 19.6895 0.23369Z"
+                                  fill="#E6E6E6"/>
+                            <span> Confirmar </span>
+                        </svg>
+                    </div>
+                    <div class="cancel_button" id="cancelButtonLast">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L8 6.58579L14.2929 0.292893C14.6834 -0.0976311 15.3166 -0.0976311 15.7071 0.292893C16.0976 0.683417 16.0976 1.31658 15.7071 1.70711L9.41421 8L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L8 9.41421L1.70711 15.7071C1.31658 16.0976 0.683417 16.0976 0.292893 15.7071C-0.0976311 15.3166 -0.0976311 14.6834 0.292893 14.2929L6.58579 8L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"
+                                  fill="#E6E6E6"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="nav_bar">
+        <a href="Home_Page.html">
+            <img src="icons/nav_home.svg" alt="Home Page">
+        </a>
+        <a href="Search_Page.html">
+            <img src="icons/nav_search.svg" alt="Search Page">
+        </a>
+        <a href="Ticket_Page.html">
+            <img src="icons/nav_ticket.svg" alt="Ticketing Page">
+        </a>
+        <a href="Personal_Page.html">
+            <img src="icons/nav_user.svg" alt="Personal Page">
+        </a>
+    </div>
+
+    <script>
+        let overlay = document.getElementById("overlay");
+        let confirm = document.getElementById("confirmButton");
+        let cancel = document.getElementById("cancelButton");
+        let tickets = document.querySelectorAll(".ticket_types");
+
+        let overlayLast = document.getElementById("overlayLastTicket");
+        let confirmLast = document.getElementById("confirmButtonLast");
+        let cancelLast = document.getElementById("cancelButtonLast");
+
+        tickets.forEach(ticket => {
+            ticket.addEventListener("click", function () {
+                if (ticket.querySelector(".first_ticket")) {
+                    return;
+                }
+                if (ticket.querySelector(".third_ticket")) {
+                    overlayLast.style.display = "flex";
+                } else {
+                    overlay.style.display = "flex";
+                }
+            });
+        });
+        confirm.addEventListener("click", function () {
+            overlay.style.display = "none";
+        });
+
+        cancel.addEventListener("click", function () {
+            overlay.style.display = "none";
+        });
+
+        confirmLast.addEventListener("click", function () {
+            overlayLast.style.display = "none";
+        });
+        cancelLast.addEventListener("click", function () {
+            overlayLast.style.display = "none";
+        });
+
+        <!-- HEART TOGGLE FUNCTION -->
+        document.addEventListener("DOMContentLoaded", function () {
+            let heart_icons = document.querySelectorAll(".heart-icon");
+            let icon_id = "favorites_list";
+
+            let favorites_list = JSON.parse(localStorage.getItem(icon_id)) || [];
+
+            heart_icons.forEach(heart => {
+                let id = heart.getAttribute("data-id");
+
+                if (favorites_list.includes(id)) {
+                    heart.src = "icons/heart_full.svg";
+                }
+
+                heart.addEventListener("click", function () {
+                    favorite_hearts(id);
+                });
+            });
+
+            function favorite_hearts(id) {
+                let index = favorites_list.indexOf(id);
+
+                if (index === -1) {
+                    favorites_list.push(id);
+                } else {
+                    favorites_list.splice(index, 1);
+                }
+
+                localStorage.setItem(icon_id, JSON.stringify(favorites_list));
+
+                document.querySelectorAll(`[data-id="${id}"]`).forEach(icon => {
+                    icon.src = favorites_list.includes(id) ? "icons/heart_full.svg" : "icons/heart_open.svg";
+                });
+            }
+        });
+    </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="global.css" rel="stylesheet">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Personal</title>
+</head>
+<body>
+<div class="container">
+
+    <div class="notice_popup">
+        <img src="icons/info_circle.svg" alt="info_icon">
+        <span> Existem pagamentos pendentes na tua conta </span>
+    </div>
+
+    <div class="favorites_container">
+        <h2> Favoritos </h2>
+        <div class="favorite_tabs">
+            <div class="event_tab">
+                <img class="pics" src="images/sonar_24.jpg" alt="sonar24">
+                <div class="event_tab_desc">
+                    <h3> SONAR 2024 </h3>
+                    <p class="p1"> sábado 30 set. </p>
+                    <p class="p2"> Pavilhão Carlos Lopes </p>
+                </div>
+                <div class="icons">
+                    <img class="heart-icon" src="icons/heart_full.svg" alt="favorites" data-id="sonar2024">
+                </div>
+            </div>
+        </div>
+
+        <div class="event_tab">
+            <img class="pics" src="images/tomorrowland.jpg" alt="tomorrowland">
+            <div class="event_tab_desc">
+                <h3> TOMORROWLAND </h3>
+                <p class="p1"> 23 julho 2024, 23h00 </p>
+                <p class="p2"> Main Stage </p>
+            </div>
+            <div class="icons">
+                <img class="heart-icon" src="icons/heart_full.svg" alt="favorites" data-id="tomorrowland">
+            </div>
+        </div>
+
+        <div class="artist_tab">
+            <img class="pics" src="images/amelie.jpg" alt="amelie">
+            <div class="artist_tab_desc">
+                <h3> AMELIE LENS </h3>
+                <p class="p1"> Artista </p>
+            </div>
+            <div class="icons">
+                <img class="heart-icon" src="icons/heart_full.svg" alt="favorites" data-id="amelie">
+            </div>
+        </div>
+    </div>
+
+    <div class="arrow_icon">
+        <img src="icons/arrow_right.svg" alt="arrow">
+    </div>
+
+    <div class="pendent_payments">
+        <h2> Pagamentos Pendentes </h2>
+    </div>
+    <div class="payment_tab">
+        <div class="payment_icon">
+            <img src="icons/card.svg" alt="card_icon">
+        </div>
+        <div class="payment_tab_desc">
+            <h3> Pagamento </h3>
+            <p class="p1"> Pendente </p>
+            <p class="p2"> 10 setembro 2023 </p>
+        </div>
+        <div class="price">
+            <p> 20,00 € </p>
+        </div>
+    </div>
+
+    <div class="reference_payment">
+        <div class="ref1">
+            <p> Entidade </p>
+            <p> Referência </p>
+            <p> Valor </p>
+        </div>
+        <div class="ref2">
+            <p> 21230 </p>
+            <p> 240 210 304 </p>
+            <p> 20,00 € </p>
+        </div>
+    </div>
+
+    <div class="other_payments">
+        <h2> Outros Pagamentos </h2>
+    </div>
+    <div class="payment_tab">
+        <div class="payment_icon">
+            <img src="icons/card.svg" alt="card_icon">
+        </div>
+        <div class="payment_tab_desc">
+            <h3> Bilhete </h3>
+            <p class="green"> Completo </p>
+            <p class="p2"> 15 agosto 2023 </p>
+        </div>
+        <div class="price">
+            <p> 35,00 € </p>
+        </div>
+    </div>
+
+    <div class="payment_tab">
+        <div class="payment_icon">
+            <img src="icons/card.svg" alt="card_icon">
+        </div>
+        <div class="payment_tab_desc">
+            <h3> Carregamento </h3>
+            <p class="green"> Completo </p>
+            <p class="p2"> 23 março 2023 </p>
+        </div>
+        <div class="price">
+            <p> 25,00 € </p>
+        </div>
+    </div>
+
+    <div class="payment_tab">
+        <div class="payment_icon">
+            <img src="icons/card.svg" alt="card_icon">
+        </div>
+        <div class="payment_tab_desc">
+            <h3> Bilhete </h3>
+            <p class="green"> Completo </p>
+            <p class="p2"> 8 fevereiro 2023 </p>
+        </div>
+        <div class="price">
+            <p> 45,00 € </p>
+        </div>
+    </div>
+
+    <div class="arrow_icon">
+        <img src="icons/arrow_right.svg" alt="arrow">
+    </div>
+
+    <div class="nav_bar">
+        <a href="Home_Page.html">
+            <img src="icons/nav_home.svg" alt="Home Page">
+        </a>
+        <a href="Search_Page.html">
+            <img src="icons/nav_search.svg" alt="Search Page">
+        </a>
+        <a href="Ticket_Page.html">
+            <img src="icons/nav_ticket.svg" alt="Ticketing Page">
+        </a>
+        <a href="Personal_Page.html">
+            <img src="icons/nav_user.svg" alt="Personal Page">
+        </a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let heart_icons = document.querySelectorAll(".heart-icon");
+            let icon_id = "favorites_list";
+
+            let favorites_list = JSON.parse(localStorage.getItem(icon_id)) || [];
+
+            heart_icons.forEach(heart => {
+                let id = heart.getAttribute("data-id");
+
+                if (favorites_list.includes(id)) {
+                    heart.src = "icons/heart_full.svg";
+                }
+
+                heart.addEventListener("click", function () {
+                    favorite_hearts(id);
+                });
+            });
+
+            function favorite_hearts(id) {
+                let index = favorites_list.indexOf(id);
+
+                if (index === -1) {
+                    favorites_list.push(id);
+                } else {
+                    favorites_list.splice(index, 1);
+                }
+
+                localStorage.setItem(icon_id, JSON.stringify(favorites_list));
+
+                document.querySelectorAll(`[data-id="${id}"]`).forEach(icon => {
+                    icon.src = favorites_list.includes(id) ? "icons/heart_full.svg" : "icons/heart_open.svg";
+                });
+            }
+        });
+    </script>
+</div>
+</body>
+</html>

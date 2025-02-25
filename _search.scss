@@ -1,0 +1,16 @@
+.search_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #323232;
+  padding: 10px 15px;
+  border-radius: 50px;
+
+  span {
+    flex-grow: 1;
+    text-align: left;
+    margin-left: 10px;
+    color: #a0a0a0;
+    font-size: 12px;
+  }
+}

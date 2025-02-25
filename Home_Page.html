@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="global.css" rel="stylesheet">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Page</title>
+</head>
+<body>
+<div class="container">
+    <h2> Bom dia, João </h2>
+
+    <div class="ticket_purchased">
+        <div class="dashed_line"></div>
+        <div class="box_details">
+            <span class="box"> a acontecer </span>
+        </div>
+        <div class="details">
+            <h3 class="img_header"> BRUNCH ELECTRONIK </h3>
+            <p class="p1"> domingo 17 set.</p>
+            <p class="p2"> Tapada da Ajuda </p>
+        </div>
+    </div>
+    <div class="tab_container">
+        <div class="small_tabs">
+            <img src="icons/nav_ticket_active.svg" alt="ticket_icon">
+            <span> 1 x Venda Final </span>
+            <img src="icons/qr.svg" alt="QR code">
+        </div>
+        <div class="small_tabs">
+            <img src="icons/cash.svg" alt="cash_icon">
+            <span> Saldo Cashless </span>
+            <p> 0,00 € </p>
+        </div>
+    </div>
+
+    <div class="suggestions_section">
+        <h2> Sugestões </h2>
+        <div class="events one">
+            <div class="event_details">
+                <h3 class="img_header"> BRUNCH ELECTRONIK LISBOA </h3>
+                <p class="p1"> domingo 17 set.</p>
+                <p class="p2"> Tapada da Ajuda </p>
+                <div class="price_icon">
+                    <span> 35,00 €</span>
+                    <div class="icons">
+                        <img class="heart-icon" src="icons/heart_open.svg" alt="favorites" data-id="brunch">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="events two">
+            <div class="event_details">
+                <h3 class="img_header"> RFM SOMNII 2025 </h3>
+                <p class="p1"> sábado 8 jul.</p>
+                <p class="p2"> Praia do Relógio </p>
+                <div class="price_icon">
+                    <span> 35,00 €</span>
+                    <div class="icons">
+                        <img class="heart-icon" src="icons/heart_open.svg" alt="favorites" data-id="somnii2025">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav_bar">
+            <a href="Home_Page.html">
+                <img src="icons/nav_home.svg" alt="Home Page">
+            </a>
+            <a href="Search_Page.html">
+                <img src="icons/nav_search.svg" alt="Search Page">
+            </a>
+            <a href="Ticket_Page.html">
+                <img src="icons/nav_ticket.svg" alt="Ticketing Page">
+            </a>
+            <a href="Personal_Page.html">
+                <img src="icons/nav_user.svg" alt="Personal Page">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let heart_icons = document.querySelectorAll(".heart-icon");
+            let icon_id = "favorites_list";
+
+            let favorites_list = JSON.parse(localStorage.getItem(icon_id)) || [];
+
+            heart_icons.forEach(heart => {
+                let id = heart.getAttribute("data-id");
+
+                if (favorites_list.includes(id)) {
+                    heart.src = "icons/heart_full.svg";
+                }
+
+                heart.addEventListener("click", function () {
+                    favorite_hearts(id);
+                });
+            });
+
+            function favorite_hearts(id) {
+                let index = favorites_list.indexOf(id);
+
+                if (index === -1) {
+                    favorites_list.push(id);
+                } else {
+                    favorites_list.splice(index, 1);
+                }
+
+                localStorage.setItem(icon_id, JSON.stringify(favorites_list));
+
+                document.querySelectorAll(`[data-id="${id}"]`).forEach(icon => {
+                    icon.src = favorites_list.includes(id) ? "icons/heart_full.svg" : "icons/heart_open.svg";
+                });
+            }
+        });
+    </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+.balance{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+
+  h1{
+    font-size: 40px;
+    margin-bottom: 5px;
+  }
+
+  p{
+    margin-top: 0;
+    color: #a0a0a0;
+    font-size: 18px;
+  }
+}
+
+.balance_tab{
+  margin-left: 5px;
+  color: #a0a0a0;
+}
+
+.plus_button {
+  display: flex;
+  border-radius: 50%;
+  background-color: #323232;
+  padding: 14px;
+  cursor: pointer;
+
+  svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.bag_icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  img {
+    width: 25px;
+    height: auto;
+    border-radius: 0;
+  }
+}
+
+.price_header {
+  color: #ff9900;
+}
+
+.price_header_plus{
+  color: #00e109;
+}
+
+.movement_reference {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: #323232;
+  border-radius: 20px;
+  padding: 12px 20px;
+  max-width: 300px;
+  margin-left: 70px;
+
+  .ref1 {
+    font-weight: bold;
+  }
+
+  .ref2 {
+    text-align: right;
+  }
+}
+
+.payment_tab_desc p{
+margin-bottom: 5px;
+}

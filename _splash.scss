@@ -1,0 +1,17 @@
+.splash_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  max-width: 600px;
+
+  .message {
+    margin-top: 100px;
+    position: absolute;
+    bottom: 50px;
+    color: #e6e6e6;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,212 @@
+.header {
+  position: relative;
+
+  .header_img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 20px;
+  }
+
+  .header_icon {
+    position: absolute;
+    display: flex;
+    border-radius: 50%;
+    bottom: 15px;
+    right: 15px;
+    background-color: #181818;
+    padding: 7px;
+    color: #e6e6e6;
+    cursor: pointer;
+
+    img {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.festival_description p {
+  font-size: 14px;
+}
+
+.ticket_container {
+  .ticket_types {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    background: linear-gradient(to right, #181818, #323232);
+    margin-bottom: 20px;
+
+    .ticket_icon {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+
+      img {
+        width: 40px;
+      }
+    }
+
+    .ticket_desc {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-right: auto;
+      padding-left: 15px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.second_ticket,.third_ticket {
+  cursor: pointer;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+
+  img {
+    width: 15px;
+    height: 15px;
+    border: #181818;
+  }
+}
+
+.first_ticket, .price_soldOut p {
+  color: #a0a0a0;
+}
+
+.second_ticket p, .third_ticket p {
+  color: #ff9900;
+}
+
+.page_overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(24, 24, 24, 0.6);
+  justify-content: center;
+  align-items: center;
+
+  .popup {
+    align-items: center;
+    width: 80%;
+    max-height: 90vh;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    height: auto;
+    position: fixed;
+    text-align: center;
+    background-color: #181818;
+
+    h2 {
+      text-align: left;
+    }
+
+    .chosen_ticket_icon {
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+
+      img {
+        width: 35px;
+      }
+    }
+
+    .chosen_ticket {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-right: auto;
+      padding-left: 10px;
+      margin-bottom: 15px;
+
+      h3 {
+        font-size: 16px;
+      }
+
+      p {
+        margin-right: 5px;
+        color: #ff9900;
+      }
+    }
+  }
+
+  .price_popUp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    background-color: #181818;
+    border-radius: 6px;
+    padding: 10px;
+    width: 65px;
+    height: 30px;
+
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+
+.purchase_desc {
+  font-size: 14px;
+  text-align: left;
+  margin-top: 5px;
+}
+
+
+.client_information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  padding: 30px 30px 25px 30px;
+  max-width: 300px;
+
+  .required_fields {
+    font-weight: bold;
+  }
+
+  .client_input {
+    text-align: right;
+  }
+
+  p {
+    margin-bottom: 8px;
+  }
+}
+
+.button_container {
+  .cancel_button {
+    display: flex;
+    border-radius: 50%;
+    background-color: #323232;
+    padding: 12px;
+    cursor: pointer;
+
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}

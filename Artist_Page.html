@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="global.css" rel="stylesheet">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Artist</title>
+</head>
+<body>
+    <div class="artist_container">
+        <div class="blur">
+            <div class="head">
+                <img class="profile" src="images/hardwell.jpg" alt="hardwell">
+                <div class="art_details">
+                    <h3> HARDWELL </h3>
+                    <p class="p1"> Artista</p>
+                    <div class="icons artist">
+                        <img class="heart-icon" src="icons/heart_open.svg" alt="favorites" data-id="brunch">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container_artist">
+        <div class="art_schedule">
+            <h2> Próximos Concertos </h2>
+        </div>
+        <div class="event_tab">
+            <img class="pics" src="images/sonar_24.jpg" alt="sonar24">
+            <div class="event_tab_desc">
+                <h3> SONAR 2024 </h3>
+                <p class="p1"> sábado 30 set. </p>
+                <p class="p2"> Pavilhão Carlos Lopes </p>
+            </div>
+            <div class="icons">
+                <img class="heart-icon" src="icons/heart_open.svg" alt="favorites" data-id="sonar2024">
+            </div>
+        </div>
+        <div class="event_tab">
+            <img class="pics" src="images/tomorrowland.jpg" alt="tomorrowland">
+            <div class="event_tab_desc">
+                <h3> TOMORROWLAND </h3>
+                <p class="p1"> 23 julho 2024, 23h00 </p>
+                <p class="p2"> Main Stage </p>
+            </div>
+            <div class="icons">
+                <img class="heart-icon" src="icons/heart_open.svg" alt="favorites" data-id="tomorrowland">
+            </div>
+        </div>
+        <div class="about_section">
+            <h2> Sobre </h2>
+            <p> Ao longo da sua vasta carreira como DJ de sucesso, produtor, remixer, dono de editora, cineasta e
+                filantropo, o ex-2 vezes DJ nº 1 do mundo, Hardwell, cimentou um legado duradouro no mundo da música
+                eletrónica.
+                Originário de Breda, uma cidade escondida nas profundezas dos Países Baixos, a jornada de Hardwell
+                começou aos 14 anos, tornando-se um artista muito procurado na cena de dança holandesa antes de começar
+                a receber atenção internacional. Dez anos depois, Hardwell, com 25 anos, culminou uma trajetória perene
+                quando foi coroado pela primeira vez como DJ nº 1 do mundo em 2013. Já a caminho de ajudar a moldar a
+                explosão do EDM naquela época, Hardwell emergiu como uma das estrelas mais aclamadas da era moderna da
+                música eletrónica.</p>
+        </div>
+
+        <div class="nav_bar">
+            <a href="Home_Page.html">
+                <img src="icons/nav_home.svg" alt="Home Page">
+            </a>
+            <a href="Search_Page.html">
+                <img src="icons/nav_search.svg" alt="Search Page">
+            </a>
+            <a href="Ticket_Page.html">
+                <img src="icons/nav_ticket.svg" alt="Ticketing Page">
+            </a>
+            <a href="Personal_Page.html">
+                <img src="icons/nav_user.svg" alt="Personal Page">
+            </a>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let heart_icons = document.querySelectorAll(".heart-icon");
+                let icon_id = "favorites_list";
+
+                let favorites_list = JSON.parse(localStorage.getItem(icon_id)) || [];
+
+                heart_icons.forEach(heart => {
+                    let id = heart.getAttribute("data-id");
+
+                    if (favorites_list.includes(id)) {
+                        heart.src = "icons/heart_full.svg";
+                    }
+
+                    heart.addEventListener("click", function () {
+                        favorite_hearts(id);
+                    });
+                });
+
+                function favorite_hearts(id) {
+                    let index = favorites_list.indexOf(id);
+
+                    if (index === -1) {
+                        favorites_list.push(id);
+                    } else {
+                        favorites_list.splice(index, 1);
+                    }
+
+                    localStorage.setItem(icon_id, JSON.stringify(favorites_list));
+
+                    document.querySelectorAll(`[data-id="${id}"]`).forEach(icon => {
+                        icon.src = favorites_list.includes(id) ? "icons/heart_full.svg" : "icons/heart_open.svg";
+                    });
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>
