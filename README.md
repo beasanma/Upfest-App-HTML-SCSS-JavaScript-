@@ -21,7 +21,6 @@ It showcases:
 
 ## Run Program
 A popup appears with a list of available browsers (Chrome, Firefox, Edge) and select your preferred browser.
-![image](https://github.com/user-attachments/assets/f69f47e2-5b8e-4977-867e-f4510dbb7697)
 
 
   
